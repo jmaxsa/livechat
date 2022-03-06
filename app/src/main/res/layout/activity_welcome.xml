@@ -20,11 +20,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_advance"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:padding="@dimen/margin_16dp"
-        android:background="@drawable/advance_button_shape"
+        app:background="@drawable/advance_button_enable_shape"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
