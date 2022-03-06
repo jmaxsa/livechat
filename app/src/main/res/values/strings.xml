@@ -4,5 +4,6 @@
 
     <!-- Welcome -->
     <string name="welcome_title">Welcome to the Live Chat!</string>
+    <string name="advance_button">Advance</string>
 
 </resources>

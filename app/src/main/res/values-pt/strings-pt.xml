@@ -1,3 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">LiveChat</string>
+    <string name="welcome_title">Seja bem-vindo ao Live Chat!</string>
+    <string name="advance_button">Avançar</string>
 </resources>

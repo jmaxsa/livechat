@@ -12,6 +12,6 @@ abstract class BaseActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val rootView by lazy { findViewById<View>(android.R.id.content) }
-        rootView.setBackgroundColor(ResourcesCompat.getColor(resources, R.color.blue_700, null))
+        rootView.setBackgroundColor(ResourcesCompat.getColor(resources, R.color.blue_500, null))
     }
 }
