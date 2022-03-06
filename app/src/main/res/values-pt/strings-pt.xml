@@ -3,4 +3,5 @@
     <string name="app_name">Live Chat</string>
     <string name="welcome_title">Seja bem-vindo ao Live Chat!</string>
     <string name="advance_button">Avançar</string>
+    <string name="no_message_title">Não encontramos nenhuma mensagem!</string>
 </resources>

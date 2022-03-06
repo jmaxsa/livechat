@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">Live Chat</string>
 
-
     <!-- Welcome -->
     <string name="welcome_title">Welcome to the Live Chat!</string>
     <string name="advance_button">Advance</string>
+
+    <string name="no_message_title">We cannot found any message!</string>
 
 </resources>
