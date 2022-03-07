@@ -3,13 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="56dp"
+    android:layout_height="@dimen/toolbar_height"
     app:titleTextColor="@color/white_text"
     android:background="@color/primary_color"
     app:title="@string/app_name">
     <ImageButton
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:id="@+id/search_button"
+        android:layout_width="@dimen/toolbar_search_button_size"
+        android:layout_height="@dimen/toolbar_search_button_size"
         android:layout_gravity="end"
         android:layout_marginEnd="@dimen/margin_16dp"
         android:background="@null"

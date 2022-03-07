@@ -5,6 +5,8 @@
     <dimen name="profile_picture_size">70dp</dimen>
     <dimen name="count_message_background_size">24dp</dimen>
     <dimen name="bottom_navigation_height">56dp</dimen>
+    <dimen name="toolbar_search_button_size">30dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
 
     <!-- Margins -->
     <dimen name="margin_8dp">8dp</dimen>
