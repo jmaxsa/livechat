@@ -1,10 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Live Chat</string>
 
-    <!-- Welcome -->
-    <string name="welcome_title">Welcome to the Live Chat!</string>
-    <string name="advance_button">Advance</string>
-
     <string name="no_message_title">We cannot found any message!</string>
 
+    <!-- Bottom Navigation -->
+    <string name="menu_chat_title">Chat</string>
+    <string name="menu_profile_title">Profile</string>
 </resources>
