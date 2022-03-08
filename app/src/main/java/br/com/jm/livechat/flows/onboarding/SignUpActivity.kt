@@ -2,12 +2,9 @@ package br.com.jm.livechat.flows.onboarding
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import br.com.jm.livechat.R
 import br.com.jm.livechat.flows.home.HomeActivity
-import br.com.jm.livechat.storage.LocalStorage
-import br.com.jm.livechat.storage.LocalStorage.Companion.FIRST_ACCESS_KEY
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
