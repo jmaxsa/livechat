@@ -35,18 +35,18 @@ class SignUpActivity: AppCompatActivity(R.layout.activity_sign_up) {
     }
 
     private fun createSignInIntent() {
-        if(!isFirstAccess()) {
-            goHome()
-        }
-        val providers = arrayListOf(
-            AuthUI.IdpConfig.PhoneBuilder().build()
-        )
+        if(!isFirstAccess()) goHome()
+        else {
+            val providers = arrayListOf(
+                AuthUI.IdpConfig.PhoneBuilder().build()
+            )
 
-        val signInIntent = AuthUI.getInstance()
-            .createSignInIntentBuilder()
-            .setAvailableProviders(providers)
-            .build()
-        signInLauncher.launch(signInIntent)
+            val signInIntent = AuthUI.getInstance()
+                .createSignInIntentBuilder()
+                .setAvailableProviders(providers)
+                .build()
+            signInLauncher.launch(signInIntent)
+        }
     }
 
     private fun onSignInResult(result: FirebaseAuthUIAuthenticationResult) {
