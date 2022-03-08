@@ -1,6 +1,7 @@
-package br.com.jm.livechat
+package br.com.jm.livechat.flows.home
 
 import android.os.Bundle
+import br.com.jm.livechat.R
 import br.com.jm.livechat.base.BaseActivity
 
 class HomeActivity : BaseActivity() {
