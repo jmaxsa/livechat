@@ -16,7 +16,7 @@ class SignUpActivity: AppCompatActivity(R.layout.activity_sign_up) {
 
     private val viewModel by viewModel<SignUpViewModel>()
 
-    private val phoneInput by lazy { findViewById<TextInputLayout>(R.id.phone_input) }
+    private val nameInput by lazy { findViewById<TextInputLayout>(R.id.name_input) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +24,7 @@ class SignUpActivity: AppCompatActivity(R.layout.activity_sign_up) {
     }
 
     private fun setupComponents() {
-        phoneInput.requestFocus()
+        nameInput.requestFocus()
     }
 
     private fun goHome() {
