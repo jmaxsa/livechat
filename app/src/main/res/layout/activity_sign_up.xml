@@ -19,7 +19,7 @@
         android:id="@+id/name_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nome completo"
+        android:hint="Full name"
         app:boxStrokeColor="@color/white_text"
         android:textColorHint="@color/white_text"
         app:hintTextColor="@color/white_text"
@@ -60,6 +60,28 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phone_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone"
+        app:boxStrokeColor="@color/white_text"
+        android:textColorHint="@color/white_text"
+        app:hintTextColor="@color/white_text"
+        android:layout_margin="@dimen/margin_16dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email_input">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white_text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password_input"
@@ -75,7 +97,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/email_input">
+        app:layout_constraintTop_toBottomOf="@id/phone_input">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -86,11 +108,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/register_button"
+        android:id="@+id/sign_up_button"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:layout_margin="@dimen/margin_16dp"
-        android:text="Cadastrar"
+        android:text="Sign Up"
         app:layout_constraintTop_toBottomOf="@id/password_input"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>

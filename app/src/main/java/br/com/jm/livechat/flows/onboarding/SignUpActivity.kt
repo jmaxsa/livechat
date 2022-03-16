@@ -2,6 +2,7 @@ package br.com.jm.livechat.flows.onboarding
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import br.com.jm.livechat.R
 import br.com.jm.livechat.flows.home.HomeActivity
@@ -17,6 +18,10 @@ class SignUpActivity: AppCompatActivity(R.layout.activity_sign_up) {
     private val viewModel by viewModel<SignUpViewModel>()
 
     private val nameInput by lazy { findViewById<TextInputLayout>(R.id.name_input) }
+    private val emailInput by lazy { findViewById<TextInputLayout>(R.id.email_input) }
+    private val phoneInput by lazy { findViewById<TextInputLayout>(R.id.phone_input) }
+    private val passwordInput by lazy { findViewById<TextInputLayout>(R.id.password_input) }
+    private val signUpButton by lazy { findViewById<Button>(R.id.sign_up_button) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
