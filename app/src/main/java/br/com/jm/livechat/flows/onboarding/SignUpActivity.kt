@@ -3,9 +3,13 @@ package br.com.jm.livechat.flows.onboarding
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import br.com.jm.livechat.R
 import br.com.jm.livechat.flows.home.HomeActivity
+import br.com.jm.livechat.models.UserRegisterBody
+import br.com.jm.livechat.network.Status
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
@@ -30,6 +34,35 @@ class SignUpActivity: AppCompatActivity(R.layout.activity_sign_up) {
 
     private fun setupComponents() {
         nameInput.requestFocus()
+        signUpButton.setOnClickListener {
+            observeRequestResult(
+                UserRegisterBody(
+                    name = nameInput.editText?.text.toString(),
+                    email = emailInput.editText?.text.toString(),
+                    phone = phoneInput.editText?.text.toString(),
+                    password = passwordInput.editText?.text.toString()
+                )
+            )
+        }
+    }
+
+    private fun observeRequestResult(userRegisterBody: UserRegisterBody) {
+        viewModel.registerUser(userRegisterBody).observe(this, Observer {
+            it?.let { resource ->
+                when (resource.status) {
+                    Status.SUCCESS -> {
+                        resource.data?.let { user -> println(user) }
+                        goHome()
+                    }
+                    Status.ERROR -> {
+                        println("LOG:::"+ it.message)
+                    }
+                    Status.LOADING -> {
+                        Toast.makeText(this, "Carregando", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+        })
     }
 
     private fun goHome() {
