@@ -18,6 +18,11 @@
         </activity>
 
         <activity
+            android:name=".flows.onboarding.SignUpSuccessActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
             android:name=".flows.onboarding.SignUpActivity"
             android:exported="true">
             <intent-filter>
